@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Wolf, Goat, and Cabbage Interactive Manual Source Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Setting Up
 
-In the project directory, you can run:
+1. This project requires [Node.js](https://nodejs.org/). Latest version of Node is recommended.
+2. Clone this project with `git clone https://github.com/kavinkul/React-wgc-interactive.git`
+3. In the root of the project, run `npm install` to install necessary node packages.
+4. To start development server, run `npm start` which will start the server at [http://localhost:3000](http://localhost:3000)
+5. You can build the project with `npm run build`. This will create a build folder with main html file at its root. You must start http server at that folder or its parent for the manual to work correctly. If you have python, you can run `python -m http.server`.
 
-### `npm start`
+## Translation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+All the texts in the interactive section of the manual are being fetched from `translation.json` file. You don't need to rebuild the project after translating. To translate this section:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. In `translation.json`, follow the template of `"en"` language in this file. You can add a new language of your choice by creating a key value pair of language and translation:
+    ```json
+    {
+        "en": {
+            // English Translation
+        },
+        "de": {
+            // Doesn't have to be two letters
+            // German Translation
+        }
+    }
+    ```
+    You must give translations to all fields that you see.
+2. In html file of your manual locate `div` element with `id` of `root`:
+    ```html
+    <div id="root" language="en"></div>
+    ```
+    Change language to the language key that you created in step 1.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Some languages may not work nicely with this manual, most notably in the graph. You may need to review how graph is implemented in [Graph.js](src/components/Graph/Graph.js).
