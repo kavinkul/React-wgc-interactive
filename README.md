@@ -18,11 +18,10 @@ All the texts in the interactive section of the manual are being fetched from `t
     ```json
     {
         "en": {
-            // English Translation
+            English Translation
         },
         "de": {
-            // Doesn't have to be two letters
-            // German Translation
+            German Translation
         }
     }
     ```
