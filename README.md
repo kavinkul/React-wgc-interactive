@@ -1,6 +1,8 @@
 # Wolf, Goat, and Cabbage Interactive Manual Source Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a manual for Wolf, Goat, and Cabbage module for Keep Talking and Nobody Explodes.
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Setting Up
 
