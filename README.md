@@ -15,13 +15,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 All the texts in the interactive section of the manual are being fetched from `translation.json` file. You don't need to rebuild the project after translating. To translate this section:
 
 1. In `translation.json`, follow the template of `"en"` language in this file. You can add a new language of your choice by creating a key value pair of language and translation:
-    ```json
+    ```
     {
         "en": {
-            English Translation
+            English Translation Goes Here
         },
         "de": {
-            German Translation
+            German Translation Goes Here
         }
     }
     ```
