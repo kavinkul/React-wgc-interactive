@@ -10,7 +10,7 @@ This project was created with [Create React App](https://github.com/facebook/cre
 2. Clone this project with `git clone https://github.com/kavinkul/React-wgc-interactive.git`
 3. In the root of the project, run `npm install` to install necessary node packages.
 4. To start development server, run `npm start` which will start the server at [http://localhost:3000](http://localhost:3000)
-5. You can build the project with `npm run build`. This will create a build folder with main html file at its root. You must start http server at that folder or its parent for the manual to work correctly. If you have python, you can run `python -m http.server`.
+5. You can build the project with `npm run build`. This will create a build folder with main html file at its root. You must start http server at that folder or its parent for the manual to work correctly. In python 3, you can run `python -m http.server`.
 
 ## Translation
 
